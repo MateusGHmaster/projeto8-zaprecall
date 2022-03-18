@@ -1,7 +1,10 @@
 import logo from './media/logo.png';
 
 export default function Firstpage () {
-    return (
+    
+    const [visible, setVisible] = React.useState(true);
+
+    return visible ?  (
 
         <section className="first-page">
             <section className="zap-container">
@@ -12,10 +15,12 @@ export default function Firstpage () {
                     <p className="zap-recall-name">ZapRecall</p>
                 </div>
             </section>
-            <section className="start-button">
+            <section className="start-button" onClick={() => setVisible(false)}>
                 <button type="button" className="begin-recall">Iniciar Recall!</button>
             </section>
         </section>
         
+    ) : (
+        <></>
     );
 }
