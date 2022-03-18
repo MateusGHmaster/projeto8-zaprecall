@@ -1,4 +1,6 @@
-import logo from './media/logo.png';
+import logo from '../media/logo.png';
+import React from 'react';
+import Questions from './Questions';
 
 export default function Firstpage () {
     
@@ -21,6 +23,8 @@ export default function Firstpage () {
         </section>
         
     ) : (
-        <></>
+        <>
+            <Questions/>
+        </>
     );
-}
+} 
