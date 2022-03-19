@@ -2,6 +2,7 @@ import React from "react";
 
 export default function Question (props) {
     
+    let className = 'initial-class';
     const [collapsed, setCollapsed] = React.useState(true);
     const [flipped, setFlipped] = React.useState(true);
     /* const [question, setQuestion] = React.useState([{incorrect},{partiallyCorrect},{correct}]); */
@@ -27,9 +28,21 @@ export default function Question (props) {
 
             <div className="flipped-card">
                 <div className="to-be-closed" onClick={() => setCollapsed(true)}>{props.card.cardAnswer}</div>
-                <button type="button" className="forgot" onClick={() => props.handleQuestions(props.index, 'incorrect')}>Não lembrei</button>
-                <button type="button" className="almost-remembered" onClick={() => props.handleQuestions(props.index, 'partially-correct')}>Quase lembrei</button>
-                <button type="button" className="remembered" onClick={() => props.handleQuestions(props.index, 'correct')}>Zap!</button>
+                <button type="button" className={className} onClick={() => {
+                    props.handleQuestions(props.index, 'incorrect');
+                    setCollapsed(true);
+                    className = props.class;
+                    }}>Não lembrei</button>
+                <button type="button" className={className} onClick={() => {
+                    props.handleQuestions(props.index, 'partially-correct');
+                    setCollapsed(true);
+                    className = props.class;
+                    }}>Quase lembrei</button>
+                <button type="button" className={className} onClick={() => {
+                    props.handleQuestions(props.index, 'correct');
+                    setCollapsed(true);
+                    className = props.class;
+                    }}>Zap!</button>
             </div>
 
         )

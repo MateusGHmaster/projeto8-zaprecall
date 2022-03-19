@@ -2,10 +2,10 @@ import React from "react";
 import Question from "./Question";
 
 const flashCards = [
-    {cardName: 'Pergunta 1', status: '', cardQuestion: 'O que é JSX?', cardFlipIcon: '',cardAnswer: 'Contúdo HTML inserido por JavaScript, através do React.'}, 
-    {cardName: 'Pergunta 2', status: '', cardQuestion: 'Complete a frase "HTML é uma linguagem de..."', cardFlipIcon: '', cardAnswer: 'marcação'},
-    {cardName: 'Pergunta 3', status: '', cardQuestion: 'O que é CSS?', cardFlipIcon: '', cardAnswer: '*termo técnico de CSS aqui*'},
-    {cardName: 'Pergunta 4', status: '', cardQuestion: 'Complete a frase "Miyazaki..." ', cardFlipIcon: '', cardAnswer: 'Por favor, não tire minha casa!'}
+    {cardName: 'Pergunta 1', status: '', cardQuestion: 'O que é JSX?',cardAnswer: 'Contúdo HTML inserido por JavaScript, através do React.'}, 
+    {cardName: 'Pergunta 2', status: '', cardQuestion: 'Complete a frase "HTML é uma linguagem de..."', cardAnswer: 'marcação'},
+    {cardName: 'Pergunta 3', status: '', cardQuestion: 'O que é CSS?', cardAnswer: '*termo técnico de CSS aqui*'},
+    {cardName: 'Pergunta 4', status: '', cardQuestion: 'Complete a frase "Miyazaki..." ', cardAnswer: 'Por favor, não tire minha casa!'}
 ];
 
 export default function Questions () {
@@ -27,7 +27,7 @@ export default function Questions () {
 
         <>
             <section className="flash-questions">
-                {cardData.map((card, index) => <Question card={card} handleQuestions={handleQuestions} index={index}/>)}
+                {cardData.map((card, index, type) => <Question card={card} handleQuestions={handleQuestions} index={index} type={type} class={card.status}/>)}
             </section>
         </>
 
