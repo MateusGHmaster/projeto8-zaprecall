@@ -20,7 +20,7 @@ export default function Question (props) {
         flipped ? (
 
             <div className="opened-card">
-                <div className="to-be-closed" >{props.card.cardQuestion}</div>
+                <div className={className} >{props.card.cardQuestion}</div>
                 <div className="flip-card" onClick={() => setFlipped(false)}><ion-icon name="reload-outline"></ion-icon></div>
             </div>
 
@@ -28,17 +28,17 @@ export default function Question (props) {
 
             <div className="flipped-card">
                 <div className="to-be-closed" onClick={() => setCollapsed(true)}>{props.card.cardAnswer}</div>
-                <button type="button" className={className} onClick={() => {
+                <button type="button" className="not-zap" onClick={() => {
                     props.handleQuestions(props.index, 'incorrect');
                     setCollapsed(true);
                     className = props.class;
                     }}>Não lembrei</button>
-                <button type="button" className={className} onClick={() => {
+                <button type="button" className="almost-zap" onClick={() => {
                     props.handleQuestions(props.index, 'partially-correct');
                     setCollapsed(true);
                     className = props.class;
                     }}>Quase lembrei</button>
-                <button type="button" className={className} onClick={() => {
+                <button type="button" className="zap" onClick={() => {
                     props.handleQuestions(props.index, 'correct');
                     setCollapsed(true);
                     className = props.class;
