@@ -1,0 +1,44 @@
+body{
+    overflow: hidden;
+} 
+
+.first-page {
+    margin-top: -8px;
+    margin-left: -8px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    min-width: 100vw;
+    background-color: #FB6B6B;
+}
+
+.zap-big-logo {
+    margin-left: 15px;
+    height: 161px;
+    width: 136px;
+}
+
+.zap-recall-name {
+    font-family: 'Righteous', sans-serif;
+    font-size: 36px;
+    color: #ffff;
+}
+
+.begin-recall {
+    width: 246px;
+    height: 54px;
+    background: #FFFFFF;
+    border: 1px solid #D70900;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+}
+
+.root {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Roboto&display=swap');
