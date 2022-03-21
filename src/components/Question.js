@@ -5,7 +5,6 @@ export default function Question (props) {
     let className = 'initial-class';
     const [collapsed, setCollapsed] = React.useState(true);
     const [flipped, setFlipped] = React.useState(true);
-    /* const [question, setQuestion] = React.useState([{incorrect},{partiallyCorrect},{correct}]); */
 
     return collapsed ? (
 
@@ -28,21 +27,23 @@ export default function Question (props) {
 
             <div className="flipped-card">
                 <div className="to-be-closed" onClick={() => setCollapsed(true)}>{props.card.cardAnswer}</div>
-                <button type="button" className="not-zap" onClick={() => {
-                    props.handleQuestions(props.index, 'incorrect');
-                    setCollapsed(true);
-                    className = props.class;
-                    }}>Não lembrei</button>
-                <button type="button" className="almost-zap" onClick={() => {
-                    props.handleQuestions(props.index, 'partially-correct');
-                    setCollapsed(true);
-                    className = props.class;
-                    }}>Quase lembrei</button>
-                <button type="button" className="zap" onClick={() => {
-                    props.handleQuestions(props.index, 'correct');
-                    setCollapsed(true);
-                    className = props.class;
-                    }}>Zap!</button>
+                <div className="buttons">
+                    <button type="button" className="not-zap" onClick={() => {
+                        props.handleQuestions(props.index, 'incorrect');
+                        setCollapsed(true);
+                        className = props.class;
+                        }}>Não lembrei</button>
+                    <button type="button" className="almost-zap" onClick={() => {
+                        props.handleQuestions(props.index, 'partially-correct');
+                        setCollapsed(true);
+                        className = props.class;
+                        }}>Quase lembrei</button>
+                    <button type="button" className="zap" onClick={() => {
+                        props.handleQuestions(props.index, 'correct');
+                        setCollapsed(true);
+                        className = props.class;
+                        }}>Zap!</button>
+                </div>
             </div>
 
         )

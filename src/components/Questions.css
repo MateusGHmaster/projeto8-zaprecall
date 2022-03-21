@@ -1,8 +1,89 @@
+.questions-container {
+    margin-top: 80px;
+}
+
 .flash-questions {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 25px;
+    align-items: center;
+    font-family: 'Recursive', sans-serif;
+    font-size: 16px;
+}
+
+.closed-card {
     width: 300px;
     height: 65px;
-    
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background: #FFFFFF;
     box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
     border-radius: 5px;
 }
+
+.opened-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 299px;
+    height: 131px;
+    background: #FFFFD5;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+}
+
+.flipped-card {
+    width: 299px;
+    height: 131px;
+    background: #FFFFD5;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+}
+
+.initial {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    background-color: aqua;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.not-zap {
+    width: 85.17px;
+    height: 37.17px;
+    
+    background: #FF3030;
+    border-radius: 5px;
+}
+
+.almost-zap {
+    width: 85.17px;
+    height: 37.17px;
+    
+    background: #FF922E;
+    border-radius: 5px;
+}
+
+.zap {
+    width: 85.17px;
+    height: 37.17px;
+    
+    background: #2FBE34;
+    border-radius: 5px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Recursive:wght@700&family=Righteous&family=Roboto&display=swap');

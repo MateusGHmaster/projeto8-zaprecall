@@ -1,7 +1,10 @@
 import React from "react";
 import Question from "./Question";
 import Footer from "./Footer";
+import Header from "./Header";
 import './Questions.css';
+import './Footer.css';
+import './Header.css';
 
 const flashCards = [
     {cardName: 'Pergunta 1', status: '', cardQuestion: 'O que é JSX?',cardAnswer: 'Contúdo HTML inserido por JavaScript, através do React.'}, 
@@ -28,8 +31,13 @@ export default function Questions () {
     return (
 
         <>
-            <section className="flash-questions">
-                {cardData.map((card, index, type) => <Question card={card} handleQuestions={handleQuestions} index={index} type={type} class={card.status}/>)}
+            <section className="header">
+                <Header />    
+            </section>
+            <section className="questions-container">
+                <section className="flash-questions">
+                    {cardData.map((card, index, type) => <Question card={card} handleQuestions={handleQuestions} index={index} type={type} class={card.status}/>)}
+                </section>
             </section>
             <section className="footer">
                 <Footer cardData={cardData} />

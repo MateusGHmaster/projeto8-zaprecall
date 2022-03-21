@@ -7,7 +7,7 @@ export default function Footer (props) {
 
     return (
 
-        <div className="footer">{toBePlayed}/4 CONCLUÍDOS</div>
+        <div className="footer-counter">{toBePlayed}/4 CONCLUÍDOS</div>
 
     );
 

@@ -1,0 +1,16 @@
+header {
+    margin-top: 15px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.zap-header {
+    font-family: 'Righteous', sans-serif;
+    font-size: 36px;
+    color: #ffff;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Roboto&display=swap');
