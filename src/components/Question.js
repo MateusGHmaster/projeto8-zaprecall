@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Question (props) {
     
-    let className = 'initial-class';
+    let changeClassName = 'initial-class';
     const [collapsed, setCollapsed] = React.useState(true);
     const [flipped, setFlipped] = React.useState(true);
 
@@ -19,7 +19,7 @@ export default function Question (props) {
         flipped ? (
 
             <div className="opened-card">
-                <div className={className} >{props.card.cardQuestion}</div>
+                <div className={changeClassName} >{props.card.cardQuestion}</div>
                 <div className="flip-card" onClick={() => setFlipped(false)}><ion-icon name="reload-outline"></ion-icon></div>
             </div>
 
@@ -31,17 +31,18 @@ export default function Question (props) {
                     <button type="button" className="not-zap" onClick={() => {
                         props.handleQuestions(props.index, 'incorrect');
                         setCollapsed(true);
-                        className = props.class;
+                        changeClassName = props.class;
+                        console.log(changeClassName);
                         }}>Não lembrei</button>
                     <button type="button" className="almost-zap" onClick={() => {
                         props.handleQuestions(props.index, 'partially-correct');
                         setCollapsed(true);
-                        className = props.class;
+                        changeClassName = props.class;
                         }}>Quase lembrei</button>
                     <button type="button" className="zap" onClick={() => {
                         props.handleQuestions(props.index, 'correct');
                         setCollapsed(true);
-                        className = props.class;
+                        changeClassName = props.class;
                         }}>Zap!</button>
                 </div>
             </div>
